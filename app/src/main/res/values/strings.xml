@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="MissingTranslation">Preach Mental Disorder</string>
+
+    <string name="map_api_key" translatable="false">AIzaSyBTfypSbx_zNMhWSBXMTA2BJBMQO7_9_T8</string>
+    <string name="google_places_key" templateMergeStrategy="preserve" translatable="false">
+            AIzaSyBTfypSbx_zNMhWSBXMTA2BJBMQO7_9_T8
+        </string>
+    <!--    <string name="map_api_key" translatable="false">AIzaSyDNIghE_OTH6GT6jz4GZceYwMsIpNwBl4Q</string>-->
+    <!--    <string name="google_places_key" templateMergeStrategy="preserve" translatable="false">-->
+    <!--            AIzaSyDNIghE_OTH6GT6jz4GZceYwMsIpNwBl4Q-->
+    <!--        </string>-->
+</resources>

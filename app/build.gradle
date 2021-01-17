@@ -1,0 +1,244 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'io.fabric'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.smartserve.consumer"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    dexOptions {
+        incremental false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+
+    /*
+
+        ======== FIREBASE ACCOUNT ==========
+        EMAIL: rapidzztest@gmail.com
+        Pass : test@1122
+
+     */
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //General Dependency
+    implementation 'com.hbb20:ccp:2.3.4'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.nabinbhandari.android:permissions:3.8'
+    implementation 'io.nlopez.smartlocation:library:3.3.3'
+    implementation 'com.afollestad:vvalidator:0.5.2'
+    implementation 'com.poovam:pin-edittext-field:1.2.1'
+    implementation 'me.srodrigo:androidhintspinner:1.0.0'
+    implementation 'com.jesualex.android:autocompletelocation:1.1'
+    // implementation 'com.github.BlackBoxVision:datetimepicker-edittext:v0.4.0'
+
+
+    //Retrofit Dependencies
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.3'
+
+
+    //Architechure Dependency
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.2.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.2.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycle_version"
+
+
+    //Google Utils
+    implementation 'com.google.firebase:firebase-messaging:20.1.3'
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+    implementation 'com.google.firebase:firebase-auth:19.3.0'
+    implementation 'com.google.firebase:firebase-core:17.2.3'
+    implementation "com.google.android.gms:play-services-maps:$rootProject.mapVersion"
+    implementation "com.google.android.gms:play-services-location:$rootProject.mapVersion"
+    implementation "com.google.android.gms:play-services-places:$rootProject.mapVersion"
+    implementation 'com.google.android.libraries.places:places:2.2.0'
+
+
+    //Testing
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // floating action menu
+    implementation 'com.github.clans:fab:1.6.4'
+
+
+
+    //event bus
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+    // pinview
+    implementation 'com.github.GoodieBag:Pinview:v1.4'
+
+    // circuler image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Sdp
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //SSP
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+
+    implementation 'com.stripe:stripe-android:14.2.0'
+    implementation 'com.braintreepayments.api:drop-in:3.+'
+    implementation 'com.braintreepayments.api:braintree:2.+'
+
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+//    implementation 'com.judopay:android-sdk:5.7.1'
+    implementation 'com.mikhaellopez:circularimageview:4.2.0'
+    implementation 'androidx.vectordrawable:vectordrawable-animated:1.0.0'
+    implementation 'androidx.browser:browser:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable-animated:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.mediarouter:mediarouter:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-vision:19.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    implementation 'com.jesualex.android:autocompletelocation:1.1'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'com.google.android.libraries.places:places:2.1.0'
+
+    implementation 'com.infideap.drawerbehavior:drawer-behavior:0.2.2'
+    implementation 'com.github.shrikanth7698:Custom-Navigation-Drawer:v0.0.1'
+    implementation 'com.google.android.gms:play-services-wallet:18.0.0'
+
+    // implementation 'com.google.android.gms:play-services:11.8.0'
+//    implementation files('libs/httpmime-4.2.5.jar')
+    implementation 'me.dm7.barcodescanner:core:1.9.4'
+    implementation 'com.google.firebase:firebase-messaging:20.1.0'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-core:17.2.1'
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'me.dm7.barcodescanner:zbar:1.9.4'
+    implementation 'com.stripe:stripe-android:14.2.0'
+    implementation 'com.braintreepayments.api:drop-in:3.+'
+    implementation 'com.braintreepayments.api:braintree:2.+'
+    // implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //implementation 'com.github.nguyenhoanglam:ImagePicker:1.2.0'
+    implementation 'com.github.nguyenhoanglam:ImagePicker:1.3.0'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    // Include all the Twitter APIs
+    implementation 'com.twitter.sdk.android:twitter:3.1.1'
+    implementation 'com.wang.avi:library:2.1.3'
+    // (Optional) Monetize using mopub
+    implementation 'com.twitter.sdk.android:twitter-mopub:3.1.1'
+    implementation 'com.facebook.android:facebook-login:[5,6)'
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
+    implementation 'com.budiyev.android:circular-progress-bar:1.1.3'
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.android.volley:volley:1.0.0'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+
+    //Sdp
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //SSP
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+    //FIREBASE
+
+
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-perf:19.0.8'
+
+
+    implementation(group: 'com.an.biometric', name: 'biometric-auth', version: '0.1.0', ext: 'aar', classifier: '')
+
+
+    //NETWORK CALLS
+    implementation "com.squareup.retrofit2:retrofit:2.6.2"
+    implementation "com.google.code.gson:gson:2.8.5"
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.3'
+
+    //event bus
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+    // pinview
+    implementation 'com.github.GoodieBag:Pinview:v1.4'
+
+    // circuler image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+//    MaterialBarcodeScanner
+    implementation 'com.edwardvanraak:MaterialBarcodeScanner:0.0.6-ALPHA'
+
+    // image  cropper
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+    // Room components
+    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+    implementation "androidx.room:room-ktx:$rootProject.roomVersion"
+    kapt "androidx.room:room-compiler:$rootProject.roomVersion"
+    androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+
+    // count animation
+    implementation 'com.daasuu:CountAnimationTextView:0.1.2'
+
+    //smart location
+    implementation 'io.nlopez.smartlocation:library:3.3.3'
+
+    // koin di
+    implementation "org.koin:koin-android-viewmodel:2.1.6"
+    implementation "org.koin:koin-android:2.1.6"
+//    implementation "org.koin:koin-androidx-scope:2.1.0"
+//    implementation "org.koin:koin-androidx-viewmodel:2.1.0"
+
+}

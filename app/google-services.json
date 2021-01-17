@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "169746795137",
+    "firebase_url": "https://smartserve-246.firebaseio.com",
+    "project_id": "smartserve-246",
+    "storage_bucket": "smartserve-246.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169746795137:android:084bbbb1a4020255ae1b80",
+        "android_client_info": {
+          "package_name": "com.smartserve.consumer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169746795137-vgstgalod19ml7odivcvkgsu3q62898t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smartserve.consumer",
+            "certificate_hash": "7012d6c3639140052076cf0b782e9d91e06d31a6"
+          }
+        },
+        {
+          "client_id": "169746795137-7hd3p98ut0ede1fvjjikd1as71b5btli.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnvfxNgVuBpbTyjl3mkKDvSs2h6BMns2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169746795137-7hd3p98ut0ede1fvjjikd1as71b5btli.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

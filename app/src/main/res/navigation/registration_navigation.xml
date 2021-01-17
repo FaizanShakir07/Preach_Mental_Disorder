@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_reg_host_fragment"
+    app:startDestination="@id/startedFragment">
+
+
+    <fragment
+        android:id="@+id/startedFragment"
+        android:name="com.preach.mentaldisorder.Views.fragments.profile.StartedFragment"
+        android:label="StartedFragment" >
+        <action
+            android:id="@+id/action_startedFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.preach.mentaldisorder.Views.fragments.profile.LoginFragment"
+        android:label="LoginFragment" />
+</navigation>
