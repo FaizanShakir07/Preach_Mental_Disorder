@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment2">
+
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.preach.mentaldisorder.Views.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment2_to_computationalFormFragment"
+            app:destination="@id/computationalFormFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_ayatByFeelingsFragment"
+            app:destination="@id/ayatByFeelingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/computationalFormFragment"
+        android:name="com.preach.mentaldisorder.Views.fragments.ComputationalFormFragment"
+        android:label="ComputationalFormFragment" />
+    <fragment
+        android:id="@+id/ayatByFeelingsFragment"
+        android:name="com.preach.mentaldisorder.Views.fragments.AyatByFeelingsFragment"
+        android:label="AyatByFeelingsFragment" />
+</navigation>
